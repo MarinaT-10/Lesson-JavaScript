@@ -11,6 +11,7 @@
 <body>
     <script>
         'use strict'
+
         function sum(num1, num2) {
             return num1 + num2;
         }
@@ -27,16 +28,27 @@
             return num1 / num2;
         }
 
-        let result1 = sum(6, 2);
-        alert (result1);
-        let result2 = raz(6, 2);
-        alert (result2);
-        let result3 = umn(6, 2);
-        alert (result3);
-        let result4 = del(6, 2);
-        alert (result4);
+               
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case (sum):
+                   return sum(arg1, arg2);
 
-       
+                case (raz):
+                    return raz (arg1, arg2);
+
+                case (umn):
+                    return umn(arg1, arg2);
+
+                case (del):
+                    return del(arg1, arg2);
+            }        
+        }
+        console.log (mathOperation(9, 3, sum))
+        console.log (mathOperation(9, 3, raz))
+        console.log (mathOperation(9, 3, umn))
+        console.log (mathOperation(9, 3, del))
+
     </script>
 </body>
 
