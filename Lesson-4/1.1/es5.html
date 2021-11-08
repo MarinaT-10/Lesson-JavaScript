@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+       // В стиле es5
+
+        function Product(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        Product.prototype.make25PercentDiscount = function () {
+            let percent = 25;
+            this.price = this.price - (this.price / 100 * percent);
+            console.log(this.price);
+        }
+
+
+        let product1 = new Product("Продукт 1", 500);
+        product1.make25PercentDiscount();
+        console.log(product1);
+        console.log(product1.price);
+
+
+    </script>
+</body>
+
+</html>
