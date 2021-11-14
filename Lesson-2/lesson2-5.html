@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        function sum(num1, num2) {
+            return num1 + num2;
+        }
+
+        function raz(num1, num2) {
+            return num1 - num2;
+        }
+
+        function umn(num1, num2) {
+            return num1 * num2;
+        }
+
+        function del(num1, num2) {
+            return num1 / num2;
+        }
+
+               
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case (sum):
+                   return sum(arg1, arg2);
+
+                case (raz):
+                    return raz (arg1, arg2);
+
+                case (umn):
+                    return umn(arg1, arg2);
+
+                case (del):
+                    return del(arg1, arg2);
+            }        
+        }
+        console.log (mathOperation(9, 3, sum))
+        console.log (mathOperation(9, 3, raz))
+        console.log (mathOperation(9, 3, umn))
+        console.log (mathOperation(9, 3, del))
+
+    </script>
+</body>
+
+</html>
